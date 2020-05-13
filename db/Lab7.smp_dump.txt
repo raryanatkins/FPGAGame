@@ -1,0 +1,20 @@
+
+State Machine - |Lab7|spi_control:comb_3|spi_state
+Name spi_state.IDLE spi_state.INTERACT spi_state.TRANSFER 
+spi_state.IDLE 0 0 0 
+spi_state.TRANSFER 1 0 1 
+spi_state.INTERACT 1 1 0 
+
+State Machine - |Lab7|spi_control:comb_3|spi_serdes:serdes|state
+Name state.STALL state.READ state.WRITE state.IDLE 
+state.IDLE 0 0 0 0 
+state.WRITE 0 0 1 1 
+state.READ 0 1 0 1 
+state.STALL 1 0 0 1 
+
+State Machine - |Lab7|Lab7_comb:Lab7_comb_inst|state
+Name state.PAUSE state.GO state.COUNTDOWN state.IDLE 
+state.IDLE 0 0 0 0 
+state.COUNTDOWN 0 0 1 1 
+state.GO 0 1 0 1 
+state.PAUSE 1 0 0 1 

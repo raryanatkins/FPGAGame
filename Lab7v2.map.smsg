@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at spi_serdes.v(4): object "spi_clk" differs only in case from object "SPI_CLK" in the same scope File: C:/Users/Ryan/Desktop/EEC 180B/Lab 7 v2/accelerometer/gsensor/hdl/spi_serdes.v Line: 4
+Info (10281): Verilog HDL Declaration information at spi_serdes.v(24): object "READ" differs only in case from object "read" in the same scope File: C:/Users/Ryan/Desktop/EEC 180B/Lab 7 v2/accelerometer/gsensor/hdl/spi_serdes.v Line: 24
+Info (10281): Verilog HDL Declaration information at spi_control.v(12): object "spi_clk" differs only in case from object "SPI_CLK" in the same scope File: C:/Users/Ryan/Desktop/EEC 180B/Lab 7 v2/accelerometer/gsensor/hdl/spi_control.v Line: 12
+Warning (10268): Verilog HDL information at lab7_comb.v(103): always construct contains both blocking and non-blocking assignments File: C:/Users/Ryan/Desktop/EEC 180B/Lab 7 v2/lab7_comb.v Line: 103
+Warning (10268): Verilog HDL information at scale_and_saturate.v(18): always construct contains both blocking and non-blocking assignments File: C:/Users/Ryan/Desktop/EEC 180B/Lab 7 v2/scale_and_saturate.v Line: 18

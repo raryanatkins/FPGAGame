@@ -1,0 +1,37 @@
+module tb_smoothing_filter ();
+
+	reg v_sync;
+	reg [1:0] SW;
+	reg data_update;
+	reg [15:0] data_x;
+	reg [15:0] data_y;
+	wire [15:0] smoothing_filter_out_x;
+	wire [15:0] smoothing_filter_out_y;
+	
+	smoothing_filter UUT (
+		.v_sync(v_sync),
+		.SW(SW),
+		.data_update(data_update),
+		.data_x(data_x),
+		.data_y(data_y),
+		.smoothing_filter_out_x(smoothing_filter_out_x),
+		.smoothing_filter_out_y(smoothing_filter_out_y)
+	);
+	
+	initial begin
+		v_sync = 1'b0;
+		data_update = 1'b1;
+		SW = 2'b01;
+		data_x = 16'hfffc;
+		data_x = #3400 16'h000a;
+	end
+	
+	
+	always #100 v_sync = ~v_sync;
+	
+	always @ (posedge v_sync)
+	begin
+		 $write("data_x = %b, smoothing_filter_out_x = %b \n", data_x, smoothing_filter_out_x);
+	end
+	
+endmodule
